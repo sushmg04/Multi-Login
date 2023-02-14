@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multi Login</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <section class="Learnlogin">
+            <ul class="sci">
+                <li data-text="Linkedin" data-color="#0a66c2">
+                    <a href="https://www.linkedin.com/login" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
+                <li data-text="github" data-color="rgb(29, 28, 28) ">
+                    <a href="https://github.com/login"  class="github"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+                <li data-text="Cloud" data-color="#112b11">
+                    <a href="https://cloud.google.com/storage/docs/uploads-downloads" class="cloud-upload"><i class="fa fa-cloud-upload" aria-hidden="true"></i></a>
+                </li>
+                <li data-text="Code" data-color="#210641">
+                    <a href="https://code.visualstudio.com/" class="code"><i class="fa fa-code" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </section>
+       
+        <script>
+            let list = document.querySelectorAll('.sci li');
+            let bg = document.querySelector('.Learnlogin');
+            list.forEach(elements => {elements.addEventListener('mouseenter',function(event){
+                let color = event.target.getAttribute('data-color');
+                bg.style.backgroundColor = color;})
+
+                elements.addEventListener('mouseleave',function(event){
+            bg.style.backgroundColor = '#fff';
+        })
+            })
+        </script>
+    </body>
+</html>
